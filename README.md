@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The page is hosted on the following link: [https://shipmate-9os2.onrender.com](https://shipmate-9os2.onrender.com)
+
+# Routes
+path="/" | Home Screen \
+path="/result" | Result Screen \
+path="/booking" | Booking Screen
 
 ## Available Scripts
 
