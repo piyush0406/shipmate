@@ -1,0 +1,52 @@
+.navbar {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-color: #F8F9FD;
+  }
+  
+  .navbar-brand {
+    left: -5rem;
+  }
+
+  .dollar-sign {
+    top: 0;
+    font-size: 1.4rem;
+    stroke-width: 1;
+    /* left: 36.13%;
+    right: 36.07%;
+    top: 25%;
+    bottom: 25%; */
+  }
+
+  .track-sign {
+    padding: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+  }
+  
+  /* .navbar-nav a {
+    color: #27378c !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-transform: capitalize;
+  } */
+  
+  /* .active {
+    width: 45px;
+    height: 22px;
+    font-weight: 700 !important;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+  } */
+  
+  .dropdown button{
+      margin-right: 3rem !important;
+  }
