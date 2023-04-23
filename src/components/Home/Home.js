@@ -1,23 +1,34 @@
 import React from 'react'
 
+//importing the navbar
 import NavElement from '../Header/Index'
-import { Button, Col, Container, Row } from 'react-bootstrap'
 
+//importing react-bootstrap components for responsive webpage
+import { Col, Container, Row } from 'react-bootstrap'
+
+//importing all the react-icons 
 import {CiLocationOn} from 'react-icons/ci'
 import {MdOutlineCalendarMonth, MdOutlineBusinessCenter} from 'react-icons/md'
 import {RiShipLine, Ri24HoursFill} from 'react-icons/ri'
 import {BsArrowRight, BsChatRightDots} from 'react-icons/bs'
 import {HiOutlineGlobeAlt} from 'react-icons/hi'
 
+//importing images
 import waves from '../../media/water_waves.png'
 
+//importing custom css
 import './Home.css'
+
+//importing react-helmet for dynamic routing
+import { Helmet } from 'react-helmet'
 
 function Home() {
   return (
     <div>
+         <Helmet>
+            <title>Shipmate | Home</title>
+        </Helmet>
         <NavElement />
-
         <Container>
             <Row>
                 <div className='hero-header'>Hassle-Free Shipping Solutions</div>

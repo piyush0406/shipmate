@@ -1,62 +1,82 @@
 import React from 'react'
-import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
-import NavElement from '../Header/Index'
 
+//importing react-bootsrap classes
+import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
+
+//importing react-stepper
 import { Stepper } from 'react-form-stepper';
 
-import './Result.css'
+//importing all the icons
 import { RiShipLine } from 'react-icons/ri';
 import { MdOutlineCalendarMonth } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
 import { BiEditAlt } from 'react-icons/bi';
 import { BsChatRightDots, BsChevronDown } from 'react-icons/bs';
+
+//importing badge elements
 import ResultCardEco from '../ResultCard/ResultCardEco';
 import ResultCardBest from '../ResultCard/ResultCardBest';
+
+//importing react-hemlet for dynamic titlte
+import { Helmet } from 'react-helmet';
+
+//importing local css
+import './Result.css'
+
+//impoting the navbar
+import NavElement from '../Header/Index'
 
 function Result() {
   return (
     <div>
+        {/* using the navbar */}
         <NavElement/>
+        
+        {/* Dynamic title */}
+        <Helmet>
+            <title>Shipmate | Result</title>
+        </Helmet>
+        
         <Container>
             <Row className='stepper-wrapper'>
-            <Stepper
-            steps={[{ label: 'Search' }, { label: 'Recommended services' }, { label: 'Results' }, { label: 'Booking' }]}
-            activeStep={2}
-            styleConfig={{completedBgColor:'#D3B0FF', activeBgColor:'#D3B0FF', inactiveTextColor:'#868686', inactiveBgColor:'#868686'}}
-            />  
+                <Stepper
+                steps={[{ label: 'Search' }, { label: 'Recommended services' }, { label: 'Results' }, { label: 'Booking' }]}
+                activeStep={2}
+                styleConfig={{completedBgColor:'#D3B0FF', activeBgColor:'#D3B0FF', inactiveTextColor:'#868686', inactiveBgColor:'#868686'}}
+                />  
             </Row>
             <Row>
                 <div className='hero-input'>
                     <Row>
-                    <Col sm='6' md='3'>
-                    <div className='input-origin'>
-                        <div className="icon"><CiLocationOn/></div>
-                        <input defaultValue='Delhi, 110003' placeholder='Origin, Port, City' className="input"></input>
-                    </div>
-                    </Col>
-                    <Col sm='6' md='3'>
-                    <div className='input-arrival'>
-                        <div className="icon"><CiLocationOn/></div>
-                        <input defaultValue='Shanghai 200080' placeholder='Destination, Port, City' className="input"></input>
-                    </div>
-                    </Col>
-                    <Col sm='6' md='3'>
-                    <div className='input-date'>
-                        <span></span><div className="icon"><MdOutlineCalendarMonth/></div>
-                        <input defaultValue='13 April 2023' className="input"></input>
-                    </div>
-                    </Col>
-                    <Col sm='4' md='2'>
-                    <div className='input-load'>
-                        <span></span><div className="icon"><RiShipLine/></div>
-                        <input defaultValue='114.21KG - AIR' placeholder='Load' className="input"></input>
-                    </div>
-                    </Col>
-                    <Col sm='2' md="auto">
-                    <div className='input-hero-edit'>
-                    <BiEditAlt/>
-                    </div>
-                    </Col>                    
+                        <Col sm='6' md='3'>
+                            <div className='input-origin'>
+                                <div className="icon"><CiLocationOn/></div>
+                                <input defaultValue='Delhi, 110003' placeholder='Origin, Port, City' className="input"></input>
+                            </div>
+                        </Col>
+                        <Col sm='6' md='3'>
+                            <div className='input-arrival'>
+                                <div className="icon"><CiLocationOn/></div>
+                                <input defaultValue='Shanghai 200080' placeholder='Destination, Port, City' className="input"></input>
+                            </div>
+                        </Col>
+                        <Col sm='6' md='3'>
+                            <div className='input-date'>
+                                <span></span><div className="icon"><MdOutlineCalendarMonth/></div>
+                                <input defaultValue='13 April 2023' className="input"></input>
+                            </div>
+                        </Col>
+                        <Col sm='4' md='2'>
+                            <div className='input-load'>
+                                <span></span><div className="icon"><RiShipLine/></div>
+                                <input defaultValue='114.21KG - AIR' placeholder='Load' className="input"></input>
+                            </div>
+                        </Col>
+                        <Col sm='2' md="auto">
+                            <div className='input-hero-edit'>
+                                <BiEditAlt/>
+                            </div>
+                        </Col>                    
                     </Row>
                 </div>
             </Row>

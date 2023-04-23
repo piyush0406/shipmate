@@ -1,30 +1,44 @@
 import React from 'react'
-import { Badge, Col, Container, Row } from 'react-bootstrap'
+
+//importing react-bootstrap components
+import { Col, Container, Row } from 'react-bootstrap'
+
+//importing navbar
 import NavElement from '../Header/Index'
+
 import { Stepper } from 'react-form-stepper'
 
+//importing react-icons
 import {TbBuildingBank} from  'react-icons/tb'
 import {GiCommercialAirplane, GiWeightScale} from 'react-icons/gi'
 import {GrInbox} from 'react-icons/gr'
 import {AiFillStar} from 'react-icons/ai'
+import { BsChatRightDots } from 'react-icons/bs'
 
+//importing images used in the js
 import sellerImg from '../../media/seller.png'
 import insuranceImg from '../../media/xcover.png'
 
+//importing local css
 import './Booking.css'
-import { BsChatRightDots } from 'react-icons/bs'
+
+//importing react-helmet for dynamic routing
+import { Helmet } from 'react-helmet'
 
 function Booking() {
   return (
     <div>
         <Container>
+            <Helmet>
+                <title>Shipmate | Booking</title>
+            </Helmet>
             <NavElement/>
             <Row className='stepper-wrapper'>
-            <Stepper
-            steps={[{ label: 'Search' }, { label: 'Recommended services' }, { label: 'Results' }, { label: 'Booking' }]}
-            activeStep={3}
-            styleConfig={{completedBgColor:'#D3B0FF', activeBgColor:'#D3B0FF', inactiveTextColor:'#868686', inactiveBgColor:'#868686'}}
-            />  
+              <Stepper
+              steps={[{ label: 'Search' }, { label: 'Recommended services' }, { label: 'Results' }, { label: 'Booking' }]}
+              activeStep={3}
+              styleConfig={{completedBgColor:'#D3B0FF', activeBgColor:'#D3B0FF', inactiveTextColor:'#868686', inactiveBgColor:'#868686'}}
+              />  
             </Row>
             <Row>
               <Col xxl='8'>
@@ -32,9 +46,9 @@ function Booking() {
                   <div className='booking-summary-header'>Booking Summary</div>
                   <Row>
                     <Col xs='auto' className='summary-destination'>
-                    <Row className='summary-icon'><TbBuildingBank/></Row>
-                    <Row className='summary-location'>Delhi,</Row>
-                    <Row className='summary-location'>110003 India</Row>
+                      <Row className='summary-icon'><TbBuildingBank/></Row>
+                      <Row className='summary-location'>Delhi,</Row>
+                      <Row className='summary-location'>110003 India</Row>
                     </Col>
                     <Col>
                       <div className='summary-plane-text'>Express</div>
@@ -42,9 +56,9 @@ function Booking() {
                       <hr />
                     </Col>
                     <Col xs='auto' className='summary-destination'>
-                    <Row className='summary-icon'><TbBuildingBank/></Row>
-                    <Row className='summary-location'>Shanghai,</Row>
-                    <Row className='summary-location'>200080, China</Row>
+                      <Row className='summary-icon'><TbBuildingBank/></Row>
+                      <Row className='summary-location'>Shanghai,</Row>
+                      <Row className='summary-location'>200080, China</Row>
                     </Col>
                   </Row>
                 </Row>
