@@ -5,7 +5,7 @@ The page is hosted on the following link: [https://shipmate-9os2.onrender.com](h
 # Routes
 path="/" | Home Screen \
 path="/result" | Result Screen \
-path="/booking" | Booking Screen \
+path="/booking" | Booking Screen
 
 ## Available Scripts
 
